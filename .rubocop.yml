@@ -1,0 +1,72 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  Exclude:
+    - .git/**/*
+    - bin/**/*
+    - coverage/**/*
+  NewCops: enable
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/LineLength:
+  Max: 100
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Exclude:
+    - guesty_api.gemspec
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+# RSpec
+RSpec/ContextWording:
+  Prefixes:
+    - for
+    - when
+    - with
+    - without
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/requests/**/*
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/RepeatedExample:
+  Exclude:
+    - spec/policies/**/*
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/mailers/**/*
