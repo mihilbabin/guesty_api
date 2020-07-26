@@ -2,21 +2,21 @@ require_relative 'lib/guesty_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "guesty_api"
-  spec.version       = GuestyApi::VERSION
+  spec.version       = GuestyAPI::VERSION
   spec.authors       = ["Michael Babin"]
   spec.email         = ["iamsuperman@ukr.net"]
 
   spec.summary       = 'Guesty API wrapper'
   spec.description   = 'Simple abstractions for Guesty API'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/mihilbabin/guesty_api"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org/"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/mihilbabin/guesty_api"
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -26,4 +26,11 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_development_dependency 'rspec', '~> 3.9'
+  spec.add_development_dependency 'simplecov', '~> 0.18.5'
+  spec.add_development_dependency 'webmock', '~> 3.8', '>= 3.8.3'
+
+  spec.add_dependency 'httparty', '~> 0.17.0'
+  spec.add_dependency 'oj', '~> 3.7'
 end

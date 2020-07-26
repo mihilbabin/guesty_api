@@ -1,3 +1,3 @@
-module GuestyApi
+module GuestyAPI
   VERSION = "0.1.0"
 end

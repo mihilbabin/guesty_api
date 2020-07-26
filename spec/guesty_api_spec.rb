@@ -1,9 +1,5 @@
-RSpec.describe GuestyApi do
+RSpec.describe GuestyAPI do
   it "has a version number" do
-    expect(GuestyApi::VERSION).not_to be nil
-  end
-
-  it "does something useful" do
-    expect(false).to eq(true)
+    expect(GuestyAPI::VERSION).not_to be nil
   end
 end

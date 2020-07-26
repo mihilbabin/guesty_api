@@ -1,6 +1,6 @@
 require "guesty_api/version"
 
-module GuestyApi
+module GuestyAPI
   class Error < StandardError; end
   # Your code goes here...
 end
