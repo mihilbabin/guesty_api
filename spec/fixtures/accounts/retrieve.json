@@ -1,0 +1,372 @@
+{
+  "_id": "596f6fe706112710005d96ff",
+  "active": true,
+  "ignoredHooks": [],
+  "pms": {
+    "cleaningStatus": {
+      "statusFade": {
+        "active": true,
+        "days": 5,
+        "toStatus": "unknown"
+      },
+      "markAsDirtyOnCheckIn": true
+    },
+    "calendar": {
+      "requireReasonForUpdatingPricing": true
+    },
+    "website": {
+      "defaultStatusForNewReservations": "inquiry",
+      "defaultSort": "title",
+      "includedListings": [],
+      "excludedListings": []
+    },
+    "paymentProcessing": {
+      "paymentProviders": {
+        "stripe": {
+          "active": true,
+          "status": "ACTIVE",
+          "accountName": "Guesty Inc.",
+          "defaultCurrency": "usd",
+          "syncedAt": "2019-11-20T21:31:01.109Z",
+          "payload": {
+            "livemode": true,
+            "token_type": "bearer",
+            "stripe_publishable_key": "pk_live_Rh6dRWYPSXeVPPCjsLFB6Ezq008sT1fCHJ",
+            "stripe_user_id": "acct_19nmQxLYcJ0oiNhY",
+            "scope": "read_write",
+            "id": "acct_19nmQxLYcJ0oiNhY"
+          }
+        }
+      },
+      "active": true
+    }
+  },
+  "whiteLabel": {
+    "integrationEmailDomains": [],
+    "shouldWhiteLabelApp": true
+  },
+  "__v": 43855,
+  "hadFirstBookingAt": "2017-07-23T10:40:20.040Z",
+  "initialLocation": "",
+  "currency": "USD",
+  "availablePhoneNumbers": [],
+  "pricePlanMinimum": 3,
+  "companyLogo": "https://cdn.filepicker.io/api/file/SRNViTfRb2RVqW3nWQbw",
+  "internalData": {
+    "agreedToTOS": {
+      "lastName": "Simpson",
+      "firstName": "OJ",
+      "userEmail": "canttouchthis@dananana.canttouchthis",
+      "date": "2017-07-23T16:04:43.772Z"
+    },
+    "features": {
+      "airbnbIntegration": "BOTH"
+    },
+    "oldOnboardingStatus": "Opted out",
+    "accountManager": null,
+    "onboardingStatus": "Opted out"
+  },
+  "customFields": [
+    {
+      "options": [],
+      "_id": "5bcebe5803e62d01859831dc",
+      "displayName": "xs",
+      "isPublic": false,
+      "key": "xs",
+      "object": "reservation",
+      "type": "boolean"
+    },
+    {
+      "options": [],
+      "_id": "5974a9ac8331fb0f00ab26b0",
+      "object": "reservation",
+      "type": "boolean",
+      "isPublic": true,
+      "key": "Personal check in?",
+      "displayName": "personalcheckin"
+    },
+    {
+      "options": ["5", "34", "555"],
+      "_id": "5a899f7faa58810025b3f213",
+      "object": "reservation",
+      "type": "enum",
+      "isPublic": true,
+      "key": "Rachel test",
+      "displayName": "racheltest"
+    },
+    {
+      "options": [],
+      "_id": "5a8e8dd6c2f9cc009add7438",
+      "object": "reservation",
+      "type": "number",
+      "isPublic": true,
+      "key": "ReservationValue",
+      "displayName": "reservationvalue"
+    }
+  ],
+  "initialReferrer": "",
+  "receptionistsService": {
+    "receptionDesk": {
+      "ittt": []
+    },
+    "screening": {
+      "checklist": []
+    },
+    "contactPersonUserId": null
+  },
+  "createdAt": "2017-07-19T14:42:47.162Z",
+  "signupQuestions": [],
+  "billing": {
+    "billingCycle": "Weekly",
+    "billingDay": 1,
+    "nextBillingDate": "2017-07-19T14:42:47.165Z",
+    "paymentMethods": [],
+    "noFreezingFlow": true,
+    "stripeCustomerId": "cus_B3jQEYNMH9zRxr"
+  },
+  "plan": [
+    {
+      "_id": "5974a99ac5cde90f0012d9d6",
+      "name": "SOFTWARE",
+      "planType": "RESERVATION_COMMISSION",
+      "value": 15,
+      "isLocked": true
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d5",
+      "value": 2,
+      "isLocked": true,
+      "name": "RECEPTIONISTS_SERVICE",
+      "planType": "RESERVATION_COMMISSION"
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d4",
+      "name": "RENTALS_UNITED",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d3",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true,
+      "name": "AIRBNB"
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d2",
+      "isLocked": true,
+      "name": "WEBSITE",
+      "planType": "ACCOUNT_MONTHLY"
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d1",
+      "name": "API_ACCESS",
+      "planType": "ACCOUNT_MONTHLY",
+      "isLocked": true
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9d0",
+      "name": "PAYMENT_PROCESSING",
+      "planType": "TRANSACTION_COMMISSION",
+      "isLocked": true,
+      "value": 0
+    },
+    {
+      "_id": "5974a99ac5cde90f0012d9cf",
+      "name": "WHITE_LABELING",
+      "planType": "ACCOUNT_MONTHLY",
+      "isLocked": true
+    }
+  ],
+  "accountCategorization": 5,
+  "onBoarding": {
+    "createdFirstHookAt": "2017-07-23T12:50:00.330Z",
+    "zendeskTicketId": "129605"
+  },
+  "activatedAt": "2017-07-23T10:18:41.781Z",
+  "apiKeys": [],
+  "systemEmailsRecipients": ["5b3222833122510103150bc4"],
+  "name": "Guesty",
+  "commissionTaxPercentage": 15,
+  "taxes": [
+    {
+      "_id": "5d2883fcc2d81b001f06f55e",
+      "name": "",
+      "type": "LOCAL_TAX",
+      "units": "FIXED",
+      "quantifier": "PER_STAY",
+      "amount": 2
+    },
+    {
+      "_id": "5df61e77f7e612001f80fabc",
+      "name": "",
+      "type": "CITY_TAX",
+      "units": "FIXED",
+      "quantifier": "PER_GUEST_PER_NIGHT",
+      "amount": 5.5
+    }
+  ],
+  "RUFeeActivation": true,
+  "mailingAddress": {
+    "lat": 30.7807867,
+    "lng": -95.4593714,
+    "full": "Arizona Ln, Huntsville, TX 77320, USA"
+  },
+  "agodaEmail": "agoda@guesty.com",
+  "accountCategorizationIsManual": true,
+  "markups": {
+    "agoda": {
+      "amount": 100,
+      "units": "PERCENTAGE",
+      "status": "MANUALLY_ALTERED"
+    },
+    "default": {
+      "units": "PERCENTAGE",
+      "amount": null
+    },
+    "bookingCom": {
+      "amount": 20,
+      "units": "PERCENTAGE",
+      "status": "MANUALLY_ALTERED"
+    },
+    "manual": {
+      "status": "MANUALLY_ALTERED",
+      "units": "PERCENTAGE",
+      "amount": 3
+    },
+    "airbnb": {
+      "amount": 6,
+      "units": "PERCENTAGE",
+      "status": "MANUALLY_ALTERED"
+    },
+    "homeaway2": {
+      "amount": 8.5,
+      "units": "PERCENTAGE",
+      "status": "MANUALLY_ALTERED"
+    }
+  },
+  "financials": {
+    "channelCommission": {
+      "rentalsUnited": {
+        "bookingCom": {
+          "tax": 1
+        },
+        "expedia": {
+          "commission": {
+            "value": 0,
+            "of": ["fareAccommodation", "fareCleaning"]
+          },
+          "tax": 0
+        },
+        "agoda": {
+          "commission": {
+            "value": 5,
+            "of": ["fareAccommodation"]
+          },
+          "tax": 1
+        }
+      },
+      "useAccountSettings": true,
+      "_id": "5b41cd9ecfe09b002596e132",
+      "bookingCom": {
+        "tax": 7
+      },
+      "homeaway2": {
+        "tax": 0,
+        "commission": {
+          "value": 0,
+          "of": ["fareAccommodation", "fareCleaning"]
+        }
+      }
+    }
+  },
+  "commissionFormula": "net_income*0.2",
+  "netIncomeFormula": "fare_accommodation + fare_cleaning",
+  "ownerRevenueFormula": "net_income*0.3",
+  "cancellationSurvey": [
+    {
+      "date": "2018-11-04T14:40:18.967Z",
+      "_id": "5bdf04d2445079003767abab",
+      "subReasons": {
+        "Other": {
+          "Other": "selected",
+          "OtherInput": "PLEASE IGNORE - This is a test.\n\nKevin verifying the cancellation flow."
+        }
+      },
+      "reasons": {
+        "Onboarding experience": "hidden",
+        "Missing features": "unselected",
+        "Technical issues": "unselected",
+        "System usability": "unselected",
+        "Value for money": "unselected",
+        "Customer support": "unselected",
+        "Guest Communication Service": "unselected",
+        "Other": "selected"
+      }
+    },
+    {
+      "date": "2018-11-28T06:48:49.011Z",
+      "_id": "5bfe3a51c62cd50037d06454",
+      "subReasons": {
+        "Other": {
+          "Other": "selected",
+          "OtherInput": "Just another test by Kevin, Please ignore."
+        }
+      },
+      "reasons": {
+        "Onboarding experience": "hidden",
+        "Missing features": "unselected",
+        "Technical issues": "unselected",
+        "System usability": "unselected",
+        "Value for money": "unselected",
+        "Customer support": "unselected",
+        "Guest Communication Service": "unselected",
+        "Other": "selected"
+      }
+    },
+    {
+      "date": "2018-11-28T06:50:13.503Z",
+      "_id": "5bfe3aa5d8ac95003cef6e66",
+      "subReasons": {
+        "Other": {
+          "Other": "selected",
+          "OtherInput": "Another test by kevin. Sorry."
+        }
+      },
+      "reasons": {
+        "Onboarding experience": "hidden",
+        "Missing features": "unselected",
+        "Technical issues": "unselected",
+        "System usability": "unselected",
+        "Value for money": "unselected",
+        "Customer support": "unselected",
+        "Guest Communication Service": "unselected",
+        "Other": "selected"
+      }
+    }
+  ],
+  "timezone": "Asia/Jerusalem",
+  "companyInformation": {
+    "_id": "5c2cc1151915150028b6ec2d",
+    "contactFirstname": "qa qa",
+    "contactEmail": "qa@guesty.com",
+    "name": "Guesty",
+    "businessType": "INDIVIDUAL",
+    "vatNum": "123456",
+    "country": "IL",
+    "address": "Eliezar Kaplan 2",
+    "city": "Tel Aviv",
+    "zipCode": "8997447",
+    "contactLastname": "QA",
+    "contactPhone": "+972501234567",
+    "corporationPlace": "IL",
+    "submittedAt": "2019-06-05T09:01:42.399Z"
+  },
+  "weekendBasePriceMigrationDone": true,
+  "sisenseAccess": true,
+  "pricePlanMaximum": null,
+  "recognizedRevenueMode": "check-in",
+  "migration": {
+    "rateStrategy": "2019-08-13T09:13:35.194Z"
+  },
+  "statementDescriptor": ""
+}

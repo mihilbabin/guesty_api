@@ -1,12 +1,19 @@
 # frozen_string_literal: true
 
-require 'simplecov'
-SimpleCov.start
-
 require 'bundler/setup'
+require 'simplecov'
+require 'webmock/rspec'
+require_relative './helpers'
+
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 require 'guesty_api'
 
 RSpec.configure do |config|
+  config.include Helpers
+
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
 
