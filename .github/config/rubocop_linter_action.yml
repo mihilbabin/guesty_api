@@ -1,0 +1,6 @@
+versions:
+  - rubocop-performance
+  - rubocop-minitest
+  - rubocop-rspec
+
+rubocop_fail_level: "refactor"
