@@ -56,17 +56,8 @@ RSpec/ContextWording:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
-RSpec/DescribeClass:
-  Exclude:
-    - spec/requests/**/*
-
 RSpec/NamedSubject:
   Enabled: false
 
-RSpec/RepeatedExample:
-  Exclude:
-    - spec/policies/**/*
-
-RSpec/MultipleExpectations:
-  Exclude:
-    - spec/mailers/**/*
+RSpec/NestedGroups:
+  Max: 5

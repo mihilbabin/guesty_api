@@ -5,9 +5,15 @@ module GuestyAPI
     def retrieve
       response = @client.get url: '/accounts/me'
 
-      throw!(body: response.body, code: response.code) unless response.success?
+      check_response! response
 
-      Entities::Account.new(parsed_body(response))
+      single_entity response
+    end
+
+    private
+
+    def entity_class
+      Entities::Account
     end
   end
 end
