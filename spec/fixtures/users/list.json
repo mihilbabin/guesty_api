@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "_id": "5901fa614258fd10000b78e3",
+      "accountId": "563e0b6a08a2710e00057b82",
+      "firstName": "Elad",
+      "lastName": "Kremer",
+      "fullName": "Elad Kremer",
+      "email": "example@guesty.com",
+      "preferredContactMethod": "email",
+      "title": "RND",
+      "displayLanguage": "en-US",
+      "settings": {
+        "notifications": {
+          "subscriptions": [
+            {
+              "type": "PAYMENT",
+              "name": "FAILED",
+              "_id": "5963924c2b5be11000077f67",
+              "targets": ["DASHBOARD"]
+            }
+          ]
+        }
+      },
+      "googleChromeNotificationsSubscriptionIds": [],
+      "favs": {
+        "views": [
+          "d950dfa3c59aege3gffdd8f7",
+          "556d95083cfdfe58e3fdd8f3",
+          "556d9asffd59ae58e3fdd8f2"
+        ]
+      },
+      "roles": [
+        {
+          "roleId": "57447a900ebc04ba98064035",
+          "_id": "5961ed9396897b1000e9be47"
+        }
+      ],
+      "phones": ["15417543010", "15417543012", "15417543013"],
+      "emails": ["example@guesty.com", "example2@guesty.com"],
+      "tags": ["newguy", "new"],
+      "notes": "this is a note",
+      "phone": "15417543010",
+      "picture": {
+        "thumbnail": "http://images.com/image_a.jpg",
+        "regular": "http://images.com/image_b.jpg"
+      },
+      "__v": 5
+    }
+  ],
+  "count": 1,
+  "fields": "",
+  "limit": 25,
+  "skip": 0
+}

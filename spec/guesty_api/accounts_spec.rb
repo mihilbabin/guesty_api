@@ -13,28 +13,17 @@ RSpec.describe GuestyAPI::Accounts do
   describe '#retrieve' do
     subject { accounts.retrieve }
 
-    context 'with bad request' do
-      before do
-        stub_request(:get, "#{api_root}/accounts/me")
-          .to_return(body: 'Bad Request', status: 400)
-      end
+    let(:url) { "#{api_root}/accounts/me" }
 
-      it 'throws API error' do
-        expect { subject }.to raise_error(
-          an_instance_of(GuestyAPI::APIError)
-            .and(having_attributes(message: 'Bad Request', code: 400)),
-        )
-      end
+    context 'with bad request' do
+      it_behaves_like 'bad request'
     end
 
     context 'with valid request' do
       let(:body) { fixture_file('accounts/retrieve.json').read }
       let(:id) { '596f6fe706112710005d96ff' }
 
-      before do
-        stub_request(:get, "#{api_root}/accounts/me")
-          .to_return(body: body)
-      end
+      before { stub_request(:get, url).to_return(body: body) }
 
       it 'returns account' do
         expect(subject).to be_a GuestyAPI::Entities::Account

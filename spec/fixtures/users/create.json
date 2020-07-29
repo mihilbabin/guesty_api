@@ -1,0 +1,23 @@
+{
+  "__v": 0,
+  "fullName": "Uria Goldy",
+  "email": "urigold@guesty.com",
+  "accountId": "563e0b6a08a2710e00057b82",
+  "_id": "59b9083432123a1000b50a9c",
+  "settings": {
+    "notifications": {
+      "subscriptions": []
+    }
+  },
+  "googleChromeNotificationsSubscriptionIds": [],
+  "roles": [
+    {
+      "roleId": "57447a900ebc04ba98064035",
+      "_id": "59b9083432123a1000b50a9d"
+    }
+  ],
+  "phones": [],
+  "emails": ["urigold@guesty.com"],
+  "tags": [],
+  "id": "59b9083432123a1000b50a9c"
+}
