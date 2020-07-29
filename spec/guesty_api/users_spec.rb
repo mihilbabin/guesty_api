@@ -22,7 +22,12 @@ RSpec.describe GuestyAPI::Users do
     context 'with valid request' do
       let(:body) { fixture_file('users/list.json').read }
 
-      before { stub_request(:get, url).to_return(body: body) }
+      before do
+        stub_request(:get, url).to_return(
+          body: body,
+          headers: {'Content-Type' => 'application/json'},
+        )
+      end
 
       it 'returns list of users' do
         expect(subject).to all(be_a GuestyAPI::Entities::User)
@@ -54,7 +59,7 @@ RSpec.describe GuestyAPI::Users do
     context 'with valid request' do
       let(:body) { fixture_file('users/retrieve.json').read }
 
-      before { stub_request(:get, url).to_return(body: body) }
+      before { stub_request(:get, url).to_return(body: body, headers: {'Content-Type' => 'application/json'}) }
 
       it 'returns user' do
         expect(subject).to be_a GuestyAPI::Entities::User
@@ -86,7 +91,7 @@ RSpec.describe GuestyAPI::Users do
             .to_return(body: body, status: 400)
         end
 
-        let(:params) {}
+        let(:params) { {} }
         let(:body) { 'Email is required' }
 
         it 'raises error' do
@@ -101,7 +106,10 @@ RSpec.describe GuestyAPI::Users do
         before do
           stub_request(http_method, url)
             .with(body: params)
-            .to_return(body: body)
+            .to_return(
+              body: body,
+              headers: {'Content-Type' => 'application/json'},
+            )
         end
 
         let(:body) { fixture_file('users/create.json').read }
@@ -178,7 +186,10 @@ RSpec.describe GuestyAPI::Users do
         before do
           stub_request(http_method, url)
             .with(body: params)
-            .to_return(body: { fullName: 'John Doe', _id: id }.to_json)
+            .to_return(
+              body: { fullName: 'John Doe', _id: id }.to_json,
+              headers: {'Content-Type' => 'application/json'},
+            )
         end
 
         let(:params) do
