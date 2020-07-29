@@ -6,6 +6,7 @@ module GuestyAPI
   class Client
     include HTTParty
     base_uri 'https://api.guesty.com/api/v2'
+    headers 'Content-Type' => 'application/json'
 
     def initialize(username:, password: nil, auth_mode: :basic)
       @username = username
@@ -18,11 +19,11 @@ module GuestyAPI
     end
 
     def post(url:, data:)
-      self.class.post(url, body: data, **auth)
+      self.class.post(url, body: data.to_json, **auth)
     end
 
     def put(url:, data:)
-      self.class.put(url, body: data, **auth)
+      self.class.put(url, body: data.to_json, **auth)
     end
 
     def delete(url:)

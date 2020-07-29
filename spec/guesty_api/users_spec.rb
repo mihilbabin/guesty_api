@@ -25,7 +25,7 @@ RSpec.describe GuestyAPI::Users do
       before do
         stub_request(:get, url).to_return(
           body: body,
-          headers: {'Content-Type' => 'application/json'},
+          headers: { 'Content-Type' => 'application/json' },
         )
       end
 
@@ -59,7 +59,12 @@ RSpec.describe GuestyAPI::Users do
     context 'with valid request' do
       let(:body) { fixture_file('users/retrieve.json').read }
 
-      before { stub_request(:get, url).to_return(body: body, headers: {'Content-Type' => 'application/json'}) }
+      before do
+        stub_request(:get, url).to_return(
+          body: body,
+          headers: { 'Content-Type' => 'application/json' },
+        )
+      end
 
       it 'returns user' do
         expect(subject).to be_a GuestyAPI::Entities::User
@@ -108,7 +113,7 @@ RSpec.describe GuestyAPI::Users do
             .with(body: params)
             .to_return(
               body: body,
-              headers: {'Content-Type' => 'application/json'},
+              headers: { 'Content-Type' => 'application/json' },
             )
         end
 
@@ -168,16 +173,16 @@ RSpec.describe GuestyAPI::Users do
         before do
           stub_request(http_method, url)
             .with(body: params)
-            .to_return(body: body, status: 400)
+            .to_return(body: body, status: 500)
         end
 
-        let(:params) {}
-        let(:body) { 'Email is required' }
+        let(:params) { { email: nil } }
+        let(:body) { 'User validation failed: email: Path `email` is required.' }
 
         it 'raises error' do
           expect { subject }.to raise_error(
             an_instance_of(GuestyAPI::APIError)
-              .and(having_attributes(message: body, code: 400)),
+              .and(having_attributes(message: body, code: 500)),
           )
         end
       end
@@ -188,7 +193,7 @@ RSpec.describe GuestyAPI::Users do
             .with(body: params)
             .to_return(
               body: { fullName: 'John Doe', _id: id }.to_json,
-              headers: {'Content-Type' => 'application/json'},
+              headers: { 'Content-Type' => 'application/json' },
             )
         end
 

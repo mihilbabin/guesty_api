@@ -4,6 +4,7 @@ require 'guesty_api/resource_base'
 require 'guesty_api/accounts'
 require 'guesty_api/client'
 require 'guesty_api/entities'
+require 'guesty_api/listings'
 require 'guesty_api/users'
 require 'guesty_api/version'
 

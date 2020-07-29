@@ -1,0 +1,122 @@
+{
+  "__v": 0,
+  "title": "example listing",
+  "accountId": "563e0b6a08a2710e00057b82",
+  "timezone": "Asia/Jerusalem",
+  "_id": "59b8f53a0454a61000a34a31",
+  "occupancyStats": [],
+  "preBooking": [],
+  "importedAt": "2017-09-13T09:07:06.450Z",
+  "offeredServices": [],
+  "calendarRules": {
+    "rentalPeriods": [],
+    "seasonalMinNights": []
+  },
+  "customFields": [],
+  "active": true,
+  "receptionistsService": {
+    "screening": {
+      "checklist": []
+    },
+    "receptionDesk": {
+      "atPhones": [],
+      "ittt": []
+    }
+  },
+  "sales": {
+    "salesService": {
+      "atPhones": []
+    }
+  },
+  "pms": {
+    "active": true,
+    "autoPayments": {
+      "policy": []
+    },
+    "tasks": {
+      "defaultTasks": []
+    },
+    "automation": {
+      "autoPricing": {
+        "rules": []
+      },
+      "autoReviews": {
+        "templates": []
+      },
+      "calendarSmartRules": {
+        "blockListings": []
+      },
+      "hooks": {
+        "ignoredHooks": []
+      },
+      "answeringMachine": {
+        "unconfirmedSubsequentMessage": {
+          "delayInMinutes": 45
+        },
+        "unconfirmedFirstMessage": {
+          "delayInMinutes": 55
+        },
+        "confirmedAfterCheckOut": {
+          "delayInMinutes": 45
+        },
+        "confirmedDuringStay": {
+          "delayInMinutes": 45
+        },
+        "confirmedDayOfCheckOut": {
+          "delayInMinutes": 45
+        },
+        "confirmedDayOfCheckIn": {
+          "delayInMinutes": 45
+        },
+        "confirmedBeforeCheckIn": {
+          "delayInMinutes": 45
+        }
+      }
+    }
+  },
+  "amenitiesNotIncluded": [],
+  "amenities": [],
+  "pictures": [],
+  "address": {
+    "full": "Eliezer Kaplan St 2, Tel Aviv-Yafo, Israel",
+    "street": "Eliezer Kaplan Street 2",
+    "city": "Tel Aviv-Yafo",
+    "country": "Israel",
+    "lat": 32.0733456,
+    "lng": 34.78202479999999
+  },
+  "tags": [],
+  "pendingTasks": [],
+  "integrations": [],
+  "SaaS": {
+    "autoRenew": true
+  },
+  "plan": [
+    {
+      "name": "SOFTWARE",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true,
+      "id": null
+    },
+    {
+      "name": "RECEPTIONISTS_SERVICE",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true,
+      "id": null
+    },
+    {
+      "name": "RENTALS_UNITED",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true,
+      "id": null
+    },
+    {
+      "name": "AIRBNB",
+      "planType": "RESERVATION_COMMISSION",
+      "isLocked": true,
+      "id": null
+    }
+  ],
+  "createdAt": "2017-09-13T09:07:06.448Z",
+  "id": "59b8f53a0454a61000a34a31"
+}

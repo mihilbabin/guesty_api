@@ -26,7 +26,7 @@ RSpec.describe GuestyAPI::Accounts do
       before do
         stub_request(:get, url).to_return(
           body: body,
-          headers: {'Content-Type' => 'application/json'},
+          headers: { 'Content-Type' => 'application/json' },
         )
       end
 

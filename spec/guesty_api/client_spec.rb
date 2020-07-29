@@ -39,7 +39,7 @@ RSpec.describe GuestyAPI::Client do
 
         it 'calls API' do
           expect(described_class).to receive(:post).with(
-            'test', body: data, **auth_hash
+            'test', body: data.to_json, **auth_hash
           )
           subject
         end
@@ -50,7 +50,7 @@ RSpec.describe GuestyAPI::Client do
 
         it 'calls API' do
           expect(described_class).to receive(:put).with(
-            'test', body: data, **auth_hash
+            'test', body: data.to_json, **auth_hash
           )
           subject
         end
