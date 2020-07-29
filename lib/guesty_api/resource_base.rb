@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'oj'
-
 module GuestyAPI
   class ResourceBase
     def initialize(client)
@@ -15,23 +13,22 @@ module GuestyAPI
     end
 
     def check_response!(response)
-      throw!(body: response.body, code: response.code) unless response.success?
-    end
+      parsed = response.parsed_response
+      msg = parsed.is_a?(Hash) ? parsed['message'] : parsed
 
-    def parsed_body(response)
-      Oj.load response.body
+      throw!(msg: msg, code: response.code) unless response.success?
     end
 
     def single_entity(response)
-      entity_class.new parsed_body(response)
+      entity_class.new response.parsed_response
     end
 
     def collection_entity(response)
-      parsed_body(response)['results'].map { |payload| entity_class.new payload }
+      response.parsed_response['results'].map { |payload| entity_class.new payload }
     end
 
-    def throw!(body:, code:)
-      raise APIError.new(body, code)
+    def throw!(msg:, code:)
+      raise APIError.new(msg, code)
     end
   end
 end
