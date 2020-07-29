@@ -23,7 +23,12 @@ RSpec.describe GuestyAPI::Accounts do
       let(:body) { fixture_file('accounts/retrieve.json').read }
       let(:id) { '596f6fe706112710005d96ff' }
 
-      before { stub_request(:get, url).to_return(body: body) }
+      before do
+        stub_request(:get, url).to_return(
+          body: body,
+          headers: { 'Content-Type' => 'application/json' },
+        )
+      end
 
       it 'returns account' do
         expect(subject).to be_a GuestyAPI::Entities::Account
