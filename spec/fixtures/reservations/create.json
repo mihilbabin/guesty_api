@@ -1,0 +1,65 @@
+{
+  "__v": 0,
+  "lastUpdatedAt": "2017-09-13T14:31:37.460Z",
+  "listingId": "59b928bb8e6bb31000219e58",
+  "checkInDateLocalized": "2017-09-15",
+  "checkOutDateLocalized": "2017-09-18",
+  "status": "inquiry",
+  "accountId": "563e0b6a08a2710e00057b82",
+  "guestId": "59b9414932123a1000b7cd54",
+  "guestsCount": 1,
+  "source": "Manual",
+  "checkIn": "2017-09-15T12:00:00.000Z",
+  "checkOut": "2017-09-18T08:00:00.000Z",
+  "nightsCount": 3,
+  "checkInIsFlexible": true,
+  "checkOutIsFlexible": true,
+  "_id": "59b9414932123a1000b7cd55",
+  "customFields": [],
+  "confirmedPreBookings": [],
+  "log": [],
+  "pendingTasks": [],
+  "review": {
+    "shouldReview": true
+  },
+  "money": {
+    "ownerRevenue": 450,
+    "commissionIncTax": 50,
+    "commissionTax": 0,
+    "commissionTaxPercentage": 0,
+    "commission": 50,
+    "commissionFormula": "net_income*0.1",
+    "netIncome": 500,
+    "netIncomeFormula": "host_payout",
+    "isFullyPaid": false,
+    "balanceDue": 500,
+    "paymentsDue": 0,
+    "totalPaid": 0,
+    "totalRefunded": 0,
+    "fareAccommodation": 500,
+    "currency": "USD",
+    "hostPayout": 500,
+    "subTotalPrice": 500,
+    "hostPayoutUsd": 500,
+    "autoPaymentsPolicy": [],
+    "payments": [],
+    "invoiceItems": [
+      {
+        "title": "Accommodation fare",
+        "amount": 500,
+        "currency": "USD",
+        "isLocked": true,
+        "_id": "59b9414932123a1000b7cd56"
+      }
+    ]
+  },
+  "integration": {
+    "_id": "5784a3cc64ce9c0e00ecaf1e",
+    "platform": "manual",
+    "limitations": {
+      "availableStatuses": []
+    }
+  },
+  "createdAt": "2017-09-13T14:31:37.452Z",
+  "id": "59b9414932123a1000b7cd55"
+}

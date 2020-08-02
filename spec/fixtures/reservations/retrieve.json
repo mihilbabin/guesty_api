@@ -1,0 +1,121 @@
+{
+  "_id": "595fe29f4ab86112341425ac",
+  "daysInAdvance": 39,
+  "accountId": "55b9f9b5393dfe0e0023455d",
+  "listingId": "582df199dd162a040123542",
+  "guestId": "595fe29c4ab861100023423a",
+  "status": "confirmed",
+  "confirmationCode": "EXAMPLE",
+  "checkInDateLocalized": "2017-08-16",
+  "checkOutDateLocalized": "2017-08-28",
+  "guestsCount": 2,
+  "source": "Booking.com",
+  "checkIn": "2017-08-16T13:00:00.000Z",
+  "checkOut": "2017-08-28T09:00:00.000Z",
+  "nightsCount": 12,
+  "confirmedAt": "2017-07-07T19:35:59.896Z",
+  "keyCode": "12345",
+  "customFields": [
+    {
+      "fieldId": "57569cf62ed4400e001678fa",
+      "value": "New",
+      "_id": "595fe2a04ab8611000a525b0"
+    }
+  ],
+  "log": [
+    {
+      "event": "Reservation was updated",
+      "by": "Me",
+      "_id": "595fe9660b9b6e10001649d2",
+      "changes": [
+        {
+          "field": "customFields 1 _id",
+          "_id": "595fe9660b9b6e10001649e5",
+          "diff": [
+            {
+              "value": "595fe9650b9b6e10001649d1",
+              "added": true,
+              "_id": "595fe9660b9b6e10001649e6"
+            }
+          ]
+        }
+      ],
+      "at": "2017-07-07T20:04:54.058Z"
+    }
+  ],
+  "review": {
+    "shouldReview": true
+  },
+  "money": {
+    "currency": "EUR",
+    "hostPayout": 1119,
+    "guestTotalPrice": 1119,
+    "alreadyPaid": 0,
+    "fareAccommodation": 1079,
+    "fareCleaning": 40,
+    "ownerRevenue": 718.5,
+    "commissionIncTax": 214.5,
+    "commissionTax": 37.23,
+    "commissionTaxPercentage": 21,
+    "commission": 177.27,
+    "commissionFormula": "net_income + 50",
+    "netIncome": 933,
+    "netIncomeFormula": "round(host_payout+fare_cleaning)",
+    "isFullyPaid": false,
+    "balanceDue": 1119,
+    "paymentsDue": 0,
+    "totalPaid": 0,
+    "totalRefunded": 0,
+    "subTotalPrice": 1119,
+    "hostPayoutUsd": 1301.786437223414,
+    "autoPaymentsPolicy": [],
+    "payments": [],
+    "invoiceItems": [
+      {
+        "title": "Accommodation fare",
+        "amount": 1079,
+        "currency": "EUR",
+        "isLocked": true,
+        "_id": "595fe29f4ab8611000a525ad"
+      },
+      {
+        "title": "Additional invoice item (optional)",
+        "amount": 10,
+        "currency": "EUR",
+        "type": "MANUAL",
+        "_id": "595fe29f4ab8611000a525a1"
+      }
+    ]
+  },
+  "integration": {
+    "_id": "56cd9ab369a2100e00742341",
+    "platform": "rentalsUnited",
+    "rentalsUnited": {
+      "id": 129132421,
+      "listingId": 98920,
+      "channelReservationId": "1906924521"
+    }
+  },
+  "createdAt": "2017-07-07T19:35:59.900Z",
+  "plannedArrival": "15:00",
+  "plannedDeparture": "8:00",
+  "listing": {
+    "_id": "582df199dd162a04002c0693",
+    "title": "Industrial and Minimal Mansion",
+    "address": {
+      "full": "The full address"
+    },
+    "picture": {
+      "thumbnail": "//guestybookings.s3.amazonaws.com/listings/thumbnail_234161096.jpg"
+    },
+    "nickname": "nickname example"
+  },
+  "guest": {
+    "_id": "595fe29c4ab8611000a525aa",
+    "email": "example@example.com",
+    "hometown": "76 grand drive City: auckland",
+    "fullName": "Sara Duma",
+    "phone": "447537986159",
+    "picture": {}
+  }
+}

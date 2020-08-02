@@ -1,0 +1,43 @@
+{
+  "count": 3,
+  "limit": 25,
+  "skip": 0,
+  "results": [
+    {
+      "_id": "5655b3dec03ca814016a5038",
+      "createdAt": "2014-12-17T08:33:44.510Z",
+      "integration": {
+        "platform": "airbnb",
+        "_id": "53eb27386b51b257846cdd11",
+        "airbnb": {
+          "listingId": 1148991,
+          "guestId": 3648962
+        }
+      },
+      "status": "inquiry",
+      "guestId": "5655b3debf1fab1507921c33",
+      "listingId": "5319674d4930a7f09b075696",
+      "checkIn": "2013-11-21T22:00:00.000Z",
+      "checkOut": "2013-11-26T22:00:00.000Z",
+      "checkInDateLocalized": "2013-11-22",
+      "checkOutDateLocalized": "2013-11-27",
+      "guestsCount": 1,
+      "money": {
+        "ourCommission": 0,
+        "ownerRevenue": 0.0,
+        "userRevenue": 0,
+        "userRevenueFormula": "host_payout",
+        "netIncome": 0,
+        "netIncomeFormula": "fare_accommodation + fare_cleaning",
+        "commission": 0,
+        "commissionFormula": "net_income*0.2",
+        "commissionIncTax": 0,
+        "commissionTax": 0,
+        "commissionTaxPercentage": 16
+      },
+      "accountId": "5319674d4930a7f09b075695",
+      "source": "Airbnb",
+      "lastUpdatedAt": "2016-04-19T19:50:54.292Z"
+    }
+  ]
+}

@@ -2,17 +2,15 @@
 
 module GuestyAPI
   class Users < ResourceBase
-    # rubocop:disable Naming/MethodParameterName
-    def list(q: nil, fields: nil, limit: 20, skip: 0)
+    def list(params: {})
       response = @client.get(
         url: '/users',
-        data: { q: q, fields: fields, limit: limit, skip: skip },
+        data: params,
       )
       check_response! response
 
       collection_entity response
     end
-    # rubocop:enable Naming/MethodParameterName
 
     def retrieve(id: :me, fields: nil)
       url = id == :me ? '/me' : "/users/#{id}"

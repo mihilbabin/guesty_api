@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe GuestyAPI::Listings do
+RSpec.describe GuestyAPI::Reservations do
   let(:client) do
     GuestyAPI::Client.new(
       username: 'username',
@@ -8,19 +8,19 @@ RSpec.describe GuestyAPI::Listings do
       auth_mode: :basic,
     )
   end
-  let(:listings) { described_class.new(client) }
+  let(:reservations) { described_class.new(client) }
 
   describe '#list' do
-    subject { listings.list }
+    subject { reservations.list }
 
-    let(:url) { "#{api_root}/listings" }
+    let(:url) { "#{api_root}/reservations" }
 
     context 'with bad request' do
       it_behaves_like 'bad request'
     end
 
     context 'with valid request' do
-      let(:body) { fixture_file('listings/list.json').read }
+      let(:body) { fixture_file('reservations/list.json').read }
 
       before do
         stub_request(:get, url).to_return(
@@ -29,35 +29,35 @@ RSpec.describe GuestyAPI::Listings do
         )
       end
 
-      it 'returns list of listings' do
-        expect(subject).to all(be_a GuestyAPI::Entities::Listing)
+      it 'returns list of reservations' do
+        expect(subject).to all(be_a GuestyAPI::Entities::Reservation)
       end
     end
   end
 
   describe '#retrieve' do
-    subject { listings.retrieve(id: id) }
+    subject { reservations.retrieve(id: id) }
 
-    let(:id) { '59ac245d27cb310f0017afe3' }
-    let(:url) { "#{api_root}/listings/#{id}?fields=" }
+    let(:id) { '595fe29f4ab86112341425ac' }
+    let(:url) { "#{api_root}/reservations/#{id}?fields=" }
 
     context 'with bad request' do
       it_behaves_like 'bad request'
     end
 
     context 'with bad id' do
-      before { stub_request(:get, url).to_return(body: 'Listing not found', status: 404) }
+      before { stub_request(:get, url).to_return(body: 'Reservation not found', status: 404) }
 
       it 'raises error' do
         expect { subject }.to raise_error(
           an_instance_of(GuestyAPI::APIError)
-            .and(having_attributes(message: 'Listing not found', code: 404)),
+            .and(having_attributes(message: 'Reservation not found', code: 404)),
         )
       end
     end
 
     context 'with valid request' do
-      let(:body) { fixture_file('listings/retrieve.json').read }
+      let(:body) { fixture_file('reservations/retrieve.json').read }
 
       before do
         stub_request(:get, url).to_return(
@@ -66,20 +66,20 @@ RSpec.describe GuestyAPI::Listings do
         )
       end
 
-      it 'returns listing' do
-        expect(subject).to be_a GuestyAPI::Entities::Listing
+      it 'returns reservation' do
+        expect(subject).to be_a GuestyAPI::Entities::Reservation
       end
 
-      it 'returns correct listing' do
+      it 'returns correct reservation' do
         expect(subject._id).to eq id
       end
     end
   end
 
   describe '#create' do
-    subject { listings.create(params: params) }
+    subject { reservations.create(params: params) }
 
-    let(:url) { "#{api_root}/listings" }
+    let(:url) { "#{api_root}/reservations" }
     let(:http_method) { :post }
 
     context 'with bad request' do
@@ -95,18 +95,18 @@ RSpec.describe GuestyAPI::Listings do
             .with(body: params)
             .to_return(
               body: body.to_json,
-              status: 400,
+              status: 500,
               headers: { 'Content-Type' => 'application/json' },
             )
         end
 
-        let(:params) { { nickname: nil } }
-        let(:body) { { message: 'Please add a unique nickname' } }
+        let(:params) { {} }
+        let(:body) { { message: 'Listing ID is required' } }
 
         it 'raises error' do
           expect { subject }.to raise_error(
             an_instance_of(GuestyAPI::APIError)
-              .and(having_attributes(message: body[:message], code: 400)),
+              .and(having_attributes(message: body[:message], code: 500)),
           )
         end
       end
@@ -118,36 +118,39 @@ RSpec.describe GuestyAPI::Listings do
             .to_return(body: body, headers: { 'Content-Type' => 'application/json' })
         end
 
-        let(:body) { fixture_file('listings/create.json').read }
+        let(:body) { fixture_file('reservations/create.json').read }
         let(:params) do
           {
-            address: {
-              full: 'Eliezer Kaplan St 2, Tel Aviv-Yafo, Israel',
+            listingId: '59b928bb8e6bb31000219e58',
+            checkInDateLocalized: '2017-09-15',
+            checkOutDateLocalized: '2017-09-18',
+            status: 'inquiry',
+            money: { fareAccommodation: '500', currency: 'USD' },
+            guest: {
+              firstName: 'Tony',
+              lastName: 'Stark',
+              phone: '+7777777',
+              email: 'tony@stark.com',
             },
-            title: 'example listing',
-            nickname: 'test',
           }
         end
 
-        it 'returns listing' do
-          expect(subject).to be_a GuestyAPI::Entities::Listing
+        it 'returns reservation' do
+          expect(subject).to be_a GuestyAPI::Entities::Reservation
         end
 
-        # rubocop:disable RSpec/MultipleExpectations
         it 'returns fields' do
-          expect(subject.title).to eq params[:title]
-          expect(subject.address['full']).to eq params.dig(:address, :full)
+          expect(subject.listingId).to eq params[:listingId]
         end
-        # rubocop:enable RSpec/MultipleExpectations
       end
     end
   end
 
   describe '#update' do
-    subject { listings.update(id: id, params: params) }
+    subject { reservations.update(id: id, params: params) }
 
-    let(:id) { '59ac245d27cb310f0017afe3' }
-    let(:url) { "#{api_root}/listings/#{id}" }
+    let(:id) { '595fe29f4ab86112341425ac' }
+    let(:url) { "#{api_root}/reservations/#{id}" }
     let(:http_method) { :put }
 
     context 'with bad request' do
@@ -159,7 +162,7 @@ RSpec.describe GuestyAPI::Listings do
     context 'with bad id' do
       before do
         stub_request(http_method, url)
-          .to_return(body: 'Please, provide an valid listing id', status: 500)
+          .to_return(body: 'Reservation not found', status: 404)
       end
 
       let(:params) { {} }
@@ -167,7 +170,7 @@ RSpec.describe GuestyAPI::Listings do
       it 'raises error' do
         expect { subject }.to raise_error(
           an_instance_of(GuestyAPI::APIError)
-            .and(having_attributes(message: 'Please, provide an valid listing id', code: 500)),
+            .and(having_attributes(message: 'Reservation not found', code: 404)),
         )
       end
     end
@@ -178,19 +181,18 @@ RSpec.describe GuestyAPI::Listings do
           stub_request(http_method, url)
             .with(body: params)
             .to_return(
-              body: body.to_json,
-              status: 400,
-              headers: { 'Content-Type' => 'application/json' },
+              body: body,
+              status: 500,
             )
         end
 
-        let(:params) { { nickname: nil } }
-        let(:body) { { message: 'Please add a non-empty unique nickname' } }
+        let(:params) { { listingId: nil } }
+        let(:body) { 'Listing not found' }
 
         it 'raises error' do
           expect { subject }.to raise_error(
             an_instance_of(GuestyAPI::APIError)
-              .and(having_attributes(message: body[:message], code: 400)),
+              .and(having_attributes(message: body, code: 500)),
           )
         end
       end
@@ -200,23 +202,23 @@ RSpec.describe GuestyAPI::Listings do
           stub_request(http_method, url)
             .with(body: params)
             .to_return(
-              body: { title: 'Test', _id: id }.to_json,
+              body: { checkOutDateLocalized: '2020-10-10', _id: id }.to_json,
               headers: { 'Content-Type' => 'application/json' },
             )
         end
 
         let(:params) do
           {
-            title: 'Test',
+            checkOutDateLocalized: '2020-10-10',
           }
         end
 
         it 'returns user' do
-          expect(subject).to be_a GuestyAPI::Entities::Listing
+          expect(subject).to be_a GuestyAPI::Entities::Reservation
         end
 
         it 'returns fields' do
-          expect(subject.title).to eq 'Test'
+          expect(subject.checkOutDateLocalized).to eq '2020-10-10'
         end
       end
     end

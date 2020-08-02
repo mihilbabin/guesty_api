@@ -13,7 +13,7 @@ RSpec.describe GuestyAPI::Users do
   describe '#list' do
     subject { users.list }
 
-    let(:url) { "#{api_root}/users?fields=&limit=20&q=&skip=0" }
+    let(:url) { "#{api_root}/users" }
 
     context 'with bad request' do
       it_behaves_like 'bad request'
