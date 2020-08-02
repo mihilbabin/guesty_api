@@ -1,0 +1,30 @@
+{
+  "count": 1,
+  "limit": 25,
+  "skip": 0,
+  "results": [
+    {
+      "_id": "58243555fb61770400aede31",
+      "fullName": "Koby Soto",
+      "lastName": "Soto",
+      "firstName": "Koby",
+      "accountId": "55b9f9b53935550e004b6c5d",
+      "hasVerifiedId": true,
+      "hometown": "US",
+      "languages": "",
+      "paymentMethods": [],
+      "communicationMethods": ["airbnb"],
+      "airbnb": {
+        "id": 8555466,
+        "url": "https://www.airbnb.com/users/show/8555466",
+        "firstName": "Koby",
+        "lastName": "Soto",
+        "fullName": "Koby Soto"
+      },
+      "phones": [],
+      "emails": [],
+      "pictures": [],
+      "verifications": ["Email address", "Phone number", "Personal info"]
+    }
+  ]
+}

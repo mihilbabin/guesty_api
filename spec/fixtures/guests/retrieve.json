@@ -1,0 +1,30 @@
+{
+  "_id": "5803ca18e48f450300c76173",
+  "fullName": "Kristen",
+  "firstName": "Kristen",
+  "accountId": "563e0b6a08a2710e00057b82",
+  "hasVerifiedId": false,
+  "hometown": "US",
+  "languages": "",
+  "paymentMethods": [],
+  "communicationMethods": ["airbnb"],
+  "airbnb": {
+    "id": 32931005,
+    "url": "https://www.airbnb.com/users/show/32931005",
+    "firstName": "Kristen",
+    "lastName": null,
+    "fullName": "Kristen"
+  },
+  "phones": [],
+  "emails": [],
+  "pictures": [
+    {
+      "thumbnail": "//guestybookings.s3.amazonaws.com/guests/thumbnail_e2cb8a96-45a9-45cd-b28e-57e1ca1fc988.jpg",
+      "large": "//guestybookings.s3.amazonaws.com/guests/large_e2cb8a96-45a9-45cd-b28e-57e1ca1fc988.jpg",
+      "regular": "//guestybookings.s3.amazonaws.com/guests/regular_e2cb8a96-45a9-45cd-b28e-57e1ca1fc988.jpg",
+      "_id": "5803ca18e48f450300c76174"
+    }
+  ],
+  "verifications": ["Email address"],
+  "__v": 0
+}
