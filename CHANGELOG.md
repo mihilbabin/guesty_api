@@ -31,3 +31,4 @@ All notable changes to this project will be documented in this file.
 - GitHub Actions
 
 [0.1.0]: https://github.com/mihilbabin/guesty_api/releases/tag/v0.1.0
+[0.2.0]: https://github.com/mihilbabin/guesty_api/releases/tag/v0.2.0
