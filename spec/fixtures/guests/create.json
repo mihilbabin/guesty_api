@@ -1,0 +1,31 @@
+{
+  "airbnb": {
+    "id": 8867624432413
+  },
+  "airbnb2": {
+    "index": "index",
+    "id": 8867624520395
+  },
+  "policy": {
+    "marketing": {
+      "isAccepted": false,
+      "dateOfAcceptance": null
+    },
+    "termsAndConditions": {
+      "isAccepted": false
+    }
+  },
+  "verifications": [],
+  "emails": [],
+  "phones": [],
+  "communicationMethods": [],
+  "paymentMethodIds": [],
+  "_id": "5f2672f9c18d86002ce30300",
+  "firstName": "John",
+  "lastName": "Doe",
+  "accountId": "5bd71654be762c003e210662",
+  "pictures": [],
+  "paymentProvidersCustomers": [],
+  "fullName": "John Doe",
+  "__v": 0
+}
