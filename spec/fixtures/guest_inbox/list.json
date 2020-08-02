@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "_id": "59664e2a41e0311000598518",
+      "createdAt": "2017-07-12T16:28:26.613Z",
+      "lastUpdatedAt": "2017-07-12T16:28:45.381Z",
+      "isRead": false,
+      "readLog": [],
+      "pendingTasks": [],
+      "accountId": "563e0b6a08a2710e00057b82",
+      "integrationId": "5784a3cc64ce9c0e00ecaf1e",
+      "thread": [
+        {
+          "module": "email",
+          "createdAt": "2017-07-12T16:28:45.381Z",
+          "sentAt": "2017-07-12T16:28:48.095Z",
+          "status": "completed",
+          "by": "Us",
+          "email": {
+            "from": "BnbAir <orisee88126@user.guesty.com>",
+            "to": ["sheliami@guesty.com"],
+            "subject": "Hey",
+            "body": "<p>This is a testy</p>\n"
+          }
+        }
+      ]
+    }
+  ],
+  "count": 1,
+  "fields": "",
+  "limit": 10,
+  "skip": 0
+}

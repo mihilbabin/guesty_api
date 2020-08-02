@@ -14,7 +14,7 @@ module GuestyAPI
 
     def check_response!(response)
       parsed = response.parsed_response
-      msg = parsed.is_a?(Hash) ? parsed['message'] : parsed
+      msg = parsed.is_a?(Hash) ? parsed['message'] || parsed.dig('error', 'message') : parsed
 
       throw!(msg: msg, code: response.code) unless response.success?
     end

@@ -1,0 +1,43 @@
+{
+  "_id": "5919be619e2b4210006f5ef7",
+  "createdAt": "2017-05-15T14:42:41.435Z",
+  "lastUpdatedAt": "2017-09-13T15:23:39.342Z",
+  "isStarred": true,
+  "isRead": true,
+  "assignee": "580c817ed4b70d0f00dcf6f6",
+  "readLog": [
+    {
+      "by": "580c817ed4b70d0f00dcf6f6",
+      "_id": "599d33837bd4aa0f0015218e",
+      "at": "2017-08-23T07:49:23.990Z"
+    }
+  ],
+  "pendingTasks": [],
+  "accountId": "563e0b6a08a2710e00057b82",
+  "integrationId": "5784a3cc64ce9c0e00ecaf1e",
+  "thread": [
+    {
+      "module": "sms",
+      "createdAt": "2017-09-13T15:23:39.342Z",
+      "status": "pending",
+      "by": "Us",
+      "sms": {
+        "from": "447520619995",
+        "to": ["972502938411"],
+        "body": "HEY!"
+      }
+    },
+    {
+      "module": "sms",
+      "createdAt": "2017-09-11T20:42:23.166Z",
+      "sentAt": "2017-09-11T20:42:24.956Z",
+      "status": "completed",
+      "by": "Us",
+      "sms": {
+        "from": "447520619995",
+        "to": ["972502938411"],
+        "body": "alsie"
+      }
+    }
+  ]
+}

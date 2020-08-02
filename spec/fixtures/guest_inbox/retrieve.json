@@ -1,0 +1,27 @@
+{
+  "_id": "59229452b4380d1000d52090",
+  "createdAt": "2017-05-22T07:33:38.973Z",
+  "lastUpdatedAt": "2017-06-04T13:39:21.395Z",
+  "isRead": true,
+  "assignee": "5803d02f7f2b400f00f0d471",
+  "readLog": [
+    {
+      "by": "591c23fddbb50f1000fa17ff",
+      "_id": "595a0595a8ec43100042dd70",
+      "at": "2017-07-03T08:51:33.326Z"
+    }
+  ],
+  "pendingTasks": [],
+  "accountId": "563e0b6a08a2710e00057b82",
+  "integrationId": "5784a3cc64ce9c0e00ecaf1e",
+  "thread": [
+    {
+      "module": "note",
+      "createdAt": "2017-06-04T13:39:21.395Z",
+      "by": "Us",
+      "note": {
+        "body": "Requested a wake up call @12"
+      }
+    }
+  ]
+}
