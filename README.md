@@ -1,4 +1,4 @@
-# GuestyAPI
+# GuestyAPI ![Ruby Gem](https://github.com/mihilbabin/guesty_api/workflows/Ruby%20Gem/badge.svg) [![Gem Version](https://badge.fury.io/rb/guesty_api.svg)](https://badge.fury.io/rb/guesty_api)
 
 Simple wrapper on top of [Guesty API](https://docs.guesty.com/)
 
