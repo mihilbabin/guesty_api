@@ -8,6 +8,7 @@ require 'guesty_api/guests'
 require 'guesty_api/listings'
 require 'guesty_api/reservations'
 require 'guesty_api/users'
+require 'guesty_api/webhooks'
 require 'guesty_api/version'
 
 module GuestyAPI

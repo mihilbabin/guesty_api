@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "595a7fc636f2491000b6b81a",
+    "accountId": "55b9f9b5393dfe0e004b6c5d",
+    "url": "https://www.hookurl.com",
+    "__v": 0,
+    "events": [
+      "guest.updated",
+      "listing.new",
+      "listing.removed",
+      "payments.failed",
+      "reservation.new",
+      "reservation.updated",
+      "reservation.reviewed",
+      "task.created",
+      "task.updated"
+    ]
+  }
+]
