@@ -14,7 +14,9 @@ module GuestyAPI
       end
 
       def respond_to_missing?(_method_name, _include_private = false)
-        @methods.include? method
+        return true if @methods.include? method
+
+        super
       end
     end
   end
