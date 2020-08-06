@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.1] - 2020-08-06
+
+### Fixed
+
+- `respond_to?` incorrect interaction
+
 ## [0.2.0] - 2020-08-02
 
 ### Added
