@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    guesty_api (0.2.0)
+    guesty_api (0.2.1)
       httparty (~> 0.17.0)
 
 GEM
