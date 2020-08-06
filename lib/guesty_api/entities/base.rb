@@ -8,12 +8,12 @@ module GuestyAPI
         @methods = payload.keys.map(&:to_sym)
       end
 
-      def method_missing(method, *_args)
+      def method_missing(method, *)
         super unless @methods.include? method
         @raw_data[method.to_s]
       end
 
-      def respond_to_missing?(_method_name, _include_private = false)
+      def respond_to_missing?(method, *)
         return true if @methods.include? method
 
         super
