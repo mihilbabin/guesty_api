@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.2.1] - 2020-08-06
+## [0.2.2] - 2020-08-06
+
+### Fixed
+
+- Yank bad release
+
+## [0.2.1] - 2020-08-06 [YANKED]
 
 ### Fixed
 
