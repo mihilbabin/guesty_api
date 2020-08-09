@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.3] - 2020-08-09
+
+### Added
+
+- `raw_data` field is now available for reading in `GuestyAPI::Entities::Base` subclasses
+
+### Fixed
+
+- Yank bad release
+
 ## [0.2.2] - 2020-08-06
 
 ### Fixed

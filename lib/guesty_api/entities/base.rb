@@ -3,6 +3,8 @@
 module GuestyAPI
   module Entities
     class Base
+      attr_reader :raw_data
+
       def initialize(payload)
         @raw_data = payload
         @methods = payload.keys.map(&:to_sym)
