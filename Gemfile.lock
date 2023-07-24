@@ -7,8 +7,8 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.7.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -25,7 +25,7 @@ GEM
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
-    public_suffix (4.0.5)
+    public_suffix (4.0.7)
     rainbow (3.0.0)
     rake (12.3.3)
     regexp_parser (1.7.1)
